@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: 'Vaibhav Saini Portfolio',
     images: [
       {
-        url: '/og-image.jpg', // You'll need to add this image to /public
+        url: '/og-image.png', // You'll need to add this image to /public
         width: 1200,
         height: 630,
         alt: 'Vaibhav Saini - Developer Portfolio',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Vaibhav Saini | Full Stack Developer Portfolio',
     description: 'Vaibhav Saini is a Full Stack Developer and software engineer focused on building real products, scalable systems, and impactful solutions.',
     creator: 'https://x.com/Vaibhav11032004', // Update with your Twitter handle
-    images: ['/og-image.jpg'], // Same as Open Graph image
+    images: ['/og-image.png'], // Same as Open Graph image
   },
   robots: {
     index: true,
@@ -75,19 +75,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/og-image.png',
+        sizes: 'any',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/og-image.png',
   },
   verification: {
     google: 'VrEmnNqA7SezugBRvYNegJyz__fvvrpT83slChVPMRo',
