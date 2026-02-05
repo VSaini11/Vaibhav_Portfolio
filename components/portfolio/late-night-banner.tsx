@@ -110,7 +110,7 @@ export default function TimeBanner() {
 
     return (
         <div
-            className={`fixed top-20 left-1/2 -translate-x-1/2 z-40 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+            className={`fixed top-20 left-1/2 -translate-x-1/2 z-40 transition-all duration-500 w-[calc(100%-2rem)] max-w-md ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
                 }`}
         >
             <div className={`relative bg-gradient-to-r ${currentMessage.gradient} backdrop-blur-md border border-white/20 rounded-2xl px-6 py-4 shadow-2xl max-w-md`}>

@@ -9,7 +9,7 @@ export default function MarqueeSection() {
                     <div key={groupIndex} className="flex shrink-0">
                         {[...Array(3)].map((_, i) => (
                             <div key={i} className="flex items-center pr-16">
-                                <span className="text-2xl md:text-4xl font-bold text-accent/80 font-mono tracking-widest uppercase">
+                                <span className="text-xl md:text-4xl font-bold text-accent/80 font-mono tracking-widest uppercase">
                                     PROBLEMS FIRST, CODE SECOND • AUTOMATE THE BORING • DESIGN FOR SCALE • DEBUG DEEPLY • WRITE CODE HUMANS CAN READ •
                                 </span>
                             </div>

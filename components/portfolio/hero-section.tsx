@@ -17,7 +17,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen bg-[#050505] text-white p-4 pt-28 md:p-8 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-[#050505] text-white p-4 pt-4 md:pt-28 md:p-8 flex items-center justify-center overflow-hidden">
 
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
@@ -74,7 +74,7 @@ export default function HeroSection() {
 
           {/* Top Text Section */}
           <div className="flex-1 flex flex-col justify-center py-8 lg:py-0 pl-4 relative">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-4 text-white">
+            <h1 className="text-5xl sm:text-8xl md:text-8xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-4 text-white">
               Full Stack<br />
               <span className="text-orange-400/90 relative inline-flex items-center gap-4 align-middle">
                 Developer
@@ -114,13 +114,13 @@ export default function HeroSection() {
 
 
             {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-8 md:gap-16 mb-12 border-white/5 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 mb-12 border-white/5 pt-8">
               <div>
-                <span className="block text-4xl md:text-5xl font-bold text-white mb-2">2.5k+</span>
+                <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">2.5k+</span>
                 <span className="text-xs text-muted-foreground uppercase tracking-widest">On <br />LinkedIn</span>
               </div>
               <div>
-                <span className="block text-4xl md:text-5xl font-bold text-white mb-2">10+</span>
+                <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">10+</span>
                 <span className="text-xs text-muted-foreground uppercase tracking-widest">Projects <br />Completed</span>
               </div>
             </div>

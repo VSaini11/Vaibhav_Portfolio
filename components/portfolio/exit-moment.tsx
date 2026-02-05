@@ -47,9 +47,8 @@ export default function ExitMomentSection() {
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <div
-          className={`transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
             Let's Talk
@@ -65,15 +64,15 @@ export default function ExitMomentSection() {
             </p>
             <a
               href="mailto:vaibhavsaini709@gmail.com"
-              className="inline-flex items-center gap-2 text-2xl md:text-3xl font-bold text-foreground hover:text-accent transition-colors group"
+              className="inline-flex items-center gap-2 text-lg sm:text-2xl md:text-3xl font-bold text-foreground hover:text-accent transition-colors group break-all sm:break-normal"
             >
               vaibhavsaini709@gmail.com
-              <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform flex-shrink-0" />
             </a>
           </div>
 
           {/* Social links */}
-          <div className="flex justify-center gap-8 mb-16">
+          <div className="flex justify-center gap-4 sm:gap-8 mb-16 flex-wrap">
             {socialLinks.map(link => {
               const Icon = link.icon
               return (
@@ -92,9 +91,8 @@ export default function ExitMomentSection() {
 
         {/* Human layer */}
         <div
-          className={`transition-all duration-1000 delay-300 max-w-2xl mx-auto p-8 rounded-xl border border-border bg-card/50 backdrop-blur-sm ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`transition-all duration-1000 delay-300 max-w-2xl mx-auto p-8 rounded-xl border border-border bg-card/50 backdrop-blur-sm ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <p className="text-foreground leading-relaxed mb-4">
             <strong>About me:</strong> I'm a final-year engineering student with a passion for building. I climb, read voraciously, and spend an unhealthy amount of time thinking about how things work.
@@ -106,9 +104,8 @@ export default function ExitMomentSection() {
 
         {/* Closing statement */}
         <div
-          className={`transition-all duration-1000 delay-500 mt-12 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`transition-all duration-1000 delay-500 mt-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <p className="text-lg text-muted-foreground italic font-light">
             "I'm ready to build. The question is: are you building something worth my time?"

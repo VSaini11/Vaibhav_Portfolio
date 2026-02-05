@@ -41,7 +41,7 @@ export default function CredibilitySection() {
 
             {/* The Book Container */}
             <div
-                className={`relative w-full max-w-5xl aspect-[0.65/1] md:aspect-[1.8/1] transition-all duration-1000 ease-[cubic-bezier(0.25,0.1,0.25,1)] transform-style-3d ${isVisible ? 'rotate-x-10 translate-y-0 opacity-100' : 'rotate-x-45 translate-y-20 opacity-0'
+                className={`relative w-full max-w-[90vw] md:max-w-5xl aspect-[0.65/1] md:aspect-[1.8/1] transition-all duration-1000 ease-[cubic-bezier(0.25,0.1,0.25,1)] transform-style-3d ${isVisible ? 'rotate-x-10 translate-y-0 opacity-100' : 'rotate-x-45 translate-y-20 opacity-0'
                     }`}
             >
                 {/* Book Cover/Spine Effect (Behind pages) */}

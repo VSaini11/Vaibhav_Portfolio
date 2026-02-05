@@ -151,7 +151,7 @@ export default function ProjectsSection() {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="flex-shrink-0 w-[340px] md:w-[380px] snap-start group"
+                className="flex-shrink-0 w-[85vw] sm:w-[340px] md:w-[380px] snap-start group"
               >
                 <div className="bg-[#0a0a0a] rounded-2xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-500 h-full flex flex-col">
 
