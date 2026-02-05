@@ -33,6 +33,9 @@ export default function Home() {
       <LateNightBanner />
 
       <main className="min-h-screen">
+        {/* SEO H1 - required for Google */}
+        <h1 className="sr-only">Vaibhav Saini</h1>
+        <h2 className="sr-only">Full Stack Developer Portfolio</h2>
         <HeroSection />
         <MarqueeSection />
         <SkillsSection />
