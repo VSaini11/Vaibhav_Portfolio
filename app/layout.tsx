@@ -9,6 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Vaibhav Saini | Full Stack Developer Portfolio',
+  applicationName: 'Vaibhav Saini',
   description: 'A cinematic portfolio of a final-year engineering student focused on building real products and solving complex problems. Explore my work in full-stack development, system design, and innovative solutions.',
   keywords: [
     'Vaibhav Saini',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     url: 'https://vaibhavsaini.vercel.app/', // Update with your actual domain
     title: 'Vaibhav Saini | Full Stack Developer Portfolio',
     description: 'Vaibhav Saini is a Full Stack Developer and software engineer focused on building real products, scalable systems, and impactful solutions.',
-    siteName: 'Vaibhav Saini Portfolio',
+    siteName: 'Vaibhav Saini',
     images: [
       {
         url: '/og-image.png', // You'll need to add this image to /public
