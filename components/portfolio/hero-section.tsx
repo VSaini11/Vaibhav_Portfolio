@@ -7,6 +7,7 @@ import {
   Palette,
   Globe
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -16,7 +17,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen bg-[#050505] text-white p-4 md:p-8 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-[#050505] text-white p-4 pt-28 md:p-8 flex items-center justify-center overflow-hidden">
 
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
@@ -45,7 +46,7 @@ export default function HeroSection() {
 
               <div className="flex items-center justify-center gap-2 mb-6">
                 <span className="bg-orange-500 rounded-full p-1">
-                  <Globe className="w-3 h-3 text-white fill-current" />
+                  <Globe className="w-1 h-1 text-white fill-current" />
                 </span>
                 <p className="text-sm font-medium text-neutral-600 leading-snug max-w-[250px]">
                   A Full Stack Developer .
@@ -72,18 +73,48 @@ export default function HeroSection() {
         <div className="lg:col-span-8 flex flex-col gap-6">
 
           {/* Top Text Section */}
-          <div className="flex-1 flex flex-col justify-center py-8 lg:py-0 pl-4">
+          <div className="flex-1 flex flex-col justify-center py-8 lg:py-0 pl-4 relative">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-4 text-white">
               Full Stack<br />
-              <span className="text-orange-400/90">Developer</span>
+              <span className="text-orange-400/90 relative inline-flex items-center gap-4 align-middle">
+                Developer
+              </span>
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-12">
               I am a final-year B.Tech student passionate about building impactful software solutions that blend problem-solving, full-stack development, and emerging AI technologies.
             </p>
+            {/* Desktop Button */}
+            <Link
+              href="/thinker"
+              className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all duration-300 group w-fit"
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
+              </span>
+              <span className="text-[10px] font-bold tracking-wider text-orange-400 group-hover:text-orange-300 transition-colors uppercase">
+                Thinker Mode
+              </span>
+            </Link>
+
+            {/* Mobile Button - Repositioned */}
+            <Link
+              href="/thinker"
+              className="md:hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all duration-300 w-fit mt-2"
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
+              </span>
+              <span className="text-[10px] font-bold tracking-wider text-orange-400 uppercase">
+                Thinker Mode
+              </span>
+            </Link>
+
 
             {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-8 md:gap-16 mb-12 border-t border-white/5 pt-8">
+            <div className="grid grid-cols-3 gap-8 md:gap-16 mb-12 border-white/5 pt-8">
               <div>
                 <span className="block text-4xl md:text-5xl font-bold text-white mb-2">2.5k+</span>
                 <span className="text-xs text-muted-foreground uppercase tracking-widest">On <br />LinkedIn</span>
