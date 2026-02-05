@@ -145,26 +145,13 @@ export const projectIdeas: ProjectIdea[] = [
     }
 ]
 
-export function getIdeaOfTheDay(): { idea: ProjectIdea; nextRefresh: number; dayIndex: number } {
-    // Stable epoch time
-    const now = new Date()
-    const startOfEpoch = new Date(0) // Unix epoch
-
-    // Calculate total days passed
-    const msPerDay = 24 * 60 * 60 * 1000
-    const daysPassed = Math.floor((now.getTime() - startOfEpoch.getTime()) / msPerDay)
-
-    // Modulo to cycle through ideas
-    const ideaIndex = daysPassed % projectIdeas.length
-
-    // Calculate next refresh time (midnight of next day)
-    const tomorrow = new Date(now)
-    tomorrow.setDate(tomorrow.getDate() + 1)
-    tomorrow.setHours(0, 0, 0, 0)
+export function getRandomIdea(): { idea: ProjectIdea; nextRefresh: number; dayIndex: number } {
+    // Random selection
+    const ideaIndex = Math.floor(Math.random() * projectIdeas.length)
 
     return {
         idea: projectIdeas[ideaIndex],
-        nextRefresh: tomorrow.getTime(),
+        nextRefresh: 0, // No longer used for refresh timing
         dayIndex: ideaIndex + 1
     }
 }

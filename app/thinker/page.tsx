@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Lightbulb, Zap, Plus, Minus } from 'lucide-react'
-import { getIdeaOfTheDay, type ProjectIdea, projectIdeas } from '@/lib/ideas'
+import { getRandomIdea, type ProjectIdea, projectIdeas } from '@/lib/ideas'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
@@ -62,9 +62,42 @@ export default function ThinkerMode() {
     const [isExpanded, setIsExpanded] = useState(false)
 
     useEffect(() => {
-        const { idea, dayIndex } = getIdeaOfTheDay()
+        const STORAGE_KEY = 'thinker_user_idea'
+        const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000
+
+        // Try to recover state from storage
+        try {
+            const stored = localStorage.getItem(STORAGE_KEY)
+            if (stored) {
+                const { ideaId, timestamp, savedDayIndex } = JSON.parse(stored)
+                const now = Date.now()
+
+                // If valid and within 24 hours
+                if (now - timestamp < TWENTY_FOUR_HOURS) {
+                    const foundIdea = projectIdeas.find(p => p.id === ideaId)
+                    if (foundIdea) {
+                        setCurrentIdea(foundIdea)
+                        setDayIndex(savedDayIndex)
+                        return // Exit early
+                    }
+                }
+            }
+        } catch (e) {
+            // Ignore storage errors, fall through to generate new
+            console.error("Failed to parse stored idea", e)
+        }
+
+        // If no valid stored idea, generate new one
+        const { idea, dayIndex: newDayIndex } = getRandomIdea()
         setCurrentIdea(idea)
-        setDayIndex(dayIndex)
+        setDayIndex(newDayIndex)
+
+        // Save to storage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            ideaId: idea.id,
+            timestamp: Date.now(),
+            savedDayIndex: newDayIndex
+        }))
     }, [])
 
     if (!currentIdea) return null
