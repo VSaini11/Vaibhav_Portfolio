@@ -86,7 +86,7 @@ export default function Navigation({ scrollProgress }: NavigationProps) {
               </a>
             ))}
             <a
-              href="mailto:hello@example.com"
+              href="mailto:vaibhavsaini709@gmail.com"
               className="px-4 py-2 rounded-lg bg-accent text-accent-foreground font-medium text-sm hover:opacity-90 transition-opacity text-center"
               onClick={() => setIsOpen(false)}
             >
