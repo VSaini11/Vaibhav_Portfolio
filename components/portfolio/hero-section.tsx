@@ -117,7 +117,7 @@ export default function HeroSection() {
             {/* Mobile Buttons - Side by Side */}
             <div className="md:hidden flex items-center gap-3 mb-4">
               <a
-                href="#"
+                href="https://amzn.in/d/0fMc2knZ"
                 className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all duration-300"
               >
                 <span className="relative flex h-1.5 w-1.5">
