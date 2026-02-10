@@ -88,7 +88,7 @@ export default function HeroSection() {
             {/* Desktop Buttons - Side by Side */}
             <div className="hidden md:flex items-center gap-3 mb-4">
               <a
-                href="https://www.amazon.in/dp/B0GMD5G78C?ref=cm_sw_r_ffobk_cp_ud_dp_6D6PTFAN4M72SHE1PFF8&ref_=cm_sw_r_ffobk_cp_ud_dp_6D6PTFAN4M72SHE1PFF8&social_share=cm_sw_r_ffobk_cp_ud_dp_6D6PTFAN4M72SHE1PFF8&bestFormat=true"
+                href="https://amzn.in/d/0fMc2knZ"
                 className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all duration-300 group"
               >
                 <span className="relative flex h-1.5 w-1.5">
