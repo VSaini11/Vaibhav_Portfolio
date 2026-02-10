@@ -84,33 +84,64 @@ export default function HeroSection() {
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-12">
               I am a final-year B.Tech student passionate about building impactful software solutions that blend problem-solving, full-stack development, and emerging AI technologies.
             </p>
-            {/* Desktop Button */}
-            <Link
-              href="/thinker"
-              className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all duration-300 group w-fit"
-            >
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
-              </span>
-              <span className="text-[10px] font-bold tracking-wider text-orange-400 group-hover:text-orange-300 transition-colors uppercase">
-                Thinker Mode
-              </span>
-            </Link>
 
-            {/* Mobile Button - Repositioned */}
-            <Link
-              href="/thinker"
-              className="md:hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all duration-300 w-fit mt-2"
-            >
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
-              </span>
-              <span className="text-[10px] font-bold tracking-wider text-orange-400 uppercase">
-                Thinker Mode
-              </span>
-            </Link>
+            {/* Desktop Buttons - Side by Side */}
+            <div className="hidden md:flex items-center gap-3 mb-4">
+              <a
+                href="https://amzn.in/d/06lK3tGH"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all duration-300 group"
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                </span>
+                <span className="text-[10px] font-bold tracking-wider text-emerald-400 group-hover:text-emerald-300 transition-colors uppercase">
+                  A Book I Wrote
+                </span>
+              </a>
+
+              <Link
+                href="/thinker"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all duration-300 group"
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
+                </span>
+                <span className="text-[10px] font-bold tracking-wider text-orange-400 group-hover:text-orange-300 transition-colors uppercase">
+                  Thinker Mode
+                </span>
+              </Link>
+            </div>
+
+            {/* Mobile Buttons - Side by Side */}
+            <div className="md:hidden flex items-center gap-3 mb-4">
+              <a
+                href="#"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all duration-300"
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                </span>
+                <span className="text-[10px] font-bold tracking-wider text-emerald-400 uppercase">
+                  A Book I Wrote
+                </span>
+              </a>
+
+              <Link
+                href="/thinker"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all duration-300"
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-500"></span>
+                </span>
+                <span className="text-[10px] font-bold tracking-wider text-orange-400 uppercase">
+                  Thinker Mode
+                </span>
+              </Link>
+            </div>
 
 
             {/* Stats Row */}
