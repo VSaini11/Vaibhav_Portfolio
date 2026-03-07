@@ -117,8 +117,16 @@ export default function RootLayout({
     ],
     alumniOf: {
       '@type': 'EducationalOrganization',
-      name: 'Your University', // Update with your university
+      name: 'SRM Institute of Science and Technology', // Updated based on user context
     },
+  }
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Vaibhav Saini',
+    alternateName: ['Vaibhav Saini Portfolio', 'Vaibhav Saini Developer'],
+    url: 'https://vaibhavsaini.vercel.app/',
   }
 
   return (
@@ -127,6 +135,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className={`font-sans antialiased`}>
