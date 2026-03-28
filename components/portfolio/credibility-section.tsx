@@ -47,29 +47,24 @@ export default function CredibilitySection() {
                 {/* Book Cover/Spine Effect (Behind pages) */}
                 <div className="absolute inset-0 bg-[#0a0a0a] rounded-sm transform translate-z-[-2px] shadow-2xl shadow-black/80" />
 
-                <div className="flex flex-col md:flex-row w-full h-full">
+                <div className="flex flex-col md:flex-row w-full h-full left-page right-page">
 
                     {/* LEFT PAGE - MEDIUM BLOG */}
                     <div
-                        className={`relative w-full h-1/2 md:w-1/2 md:h-full bg-[#f4f1ea] origin-bottom md:origin-right transition-transform duration-1000 delay-300 ease-out border-b md:border-b-0 md:border-r border-[#d4c5a9]/30 ${isVisible ? 'rotate-x-0 md:rotate-y-0' : 'rotate-x-12 md:rotate-y-12'
-                            }`}
                         style={{
                             boxShadow: 'var(--left-page-shadow)',
                             borderTopLeftRadius: '4px',
-                            borderTopRightRadius: '4px', // Mobile top corners
-                            borderBottomLeftRadius: '0px', // Reset for mobile
-                            borderBottomRightRadius: '0px', // Reset for mobile
                         }}
+                        className="relative w-full h-1/2 md:w-1/2 md:h-full bg-[#f4f1ea] origin-bottom md:origin-right transition-transform duration-1000 delay-300 ease-out border-b md:border-b-0 md:border-r border-[#d4c5a9]/40 md:rounded-tr-none md:rounded-bl-sm"
                     >
-                        <style jsx>{`
-                            div[style] {
+                        {/* Shadow Variables via standard CSS variables or inline styles */}
+                        <style>{`
+                            .left-page {
                                 --left-page-shadow: inset 0 -20px 40px -10px rgba(139,115,85,0.3);
                             }
                             @media (min-width: 768px) {
-                                div[style] {
+                                .left-page {
                                     --left-page-shadow: inset -20px 0 40px -10px rgba(139,115,85,0.3);
-                                    border-top-right-radius: 0px !important;
-                                    border-bottom-left-radius: 4px !important;
                                 }
                             }
                         `}</style>
@@ -130,24 +125,18 @@ export default function CredibilitySection() {
 
                     {/* RIGHT PAGE - KINDLE BOOK */}
                     <div
-                        className={`relative w-full h-1/2 md:w-1/2 md:h-full bg-[#f4f1ea] origin-top md:origin-left transition-transform duration-1000 delay-300 ease-out border-t md:border-t-0 md:border-l border-[#d4c5a9]/30 ${isVisible ? 'rotate-x-0 md:rotate-y-0' : '-rotate-x-12 md:-rotate-y-12'
-                            }`}
                         style={{
                             boxShadow: 'var(--right-page-shadow)',
-                            borderBottomLeftRadius: '4px',
-                            borderBottomRightRadius: '4px',
-                            borderTopRightRadius: '0px',
                         }}
+                        className="relative w-full h-1/2 md:w-1/2 md:h-full bg-[#f4f1ea] origin-top md:origin-left transition-transform duration-1000 delay-300 ease-out border-t md:border-t-0 md:border-l border-[#d4c5a9]/40 rounded-bl-sm rounded-br-sm md:rounded-bl-none md:rounded-tr-sm"
                     >
-                        <style jsx>{`
-                            div[style] {
+                        <style>{`
+                            .right-page {
                                 --right-page-shadow: inset 0 20px 40px -10px rgba(139,115,85,0.3);
                             }
                             @media (min-width: 768px) {
-                                div[style] {
+                                .right-page {
                                     --right-page-shadow: inset 20px 0 40px -10px rgba(139,115,85,0.3);
-                                    border-top-right-radius: 4px !important;
-                                    border-bottom-left-radius: 0px !important;
                                 }
                             }
                         `}</style>
