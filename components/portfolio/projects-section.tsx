@@ -83,9 +83,16 @@ function ProjectCard({ project, index, scrollXProgress }: { project: any, index:
   }
 
   // Perspective scroll transforms based on vertical-to-horizontal progress
-  const step = 1 / (projects.length - 1)
+  const numProjects = projects.length
+  const step = numProjects > 1 ? 1 / (numProjects - 1) : 0.1
   const mid = index * step
-  const range = [mid - step, mid, mid + step]
+  
+  // Clamping ranges to [0, 1] to prevent "monotonically non-decreasing" WAAPI errors
+  const range = [
+    Math.max(0, mid - step),
+    mid,
+    Math.min(1, mid + step)
+  ]
   
   const rotateYScroll = useTransform(scrollXProgress, range, [20, 0, -20])
   const scaleScroll = useTransform(scrollXProgress, range, [0.92, 1, 0.92])
@@ -217,7 +224,7 @@ export default function ProjectsSection() {
   }, [])
 
   const scrollToIndex = (index: number) => {
-     if (!containerRef.current) return
+     if (!containerRef.current || projects.length <= 1) return
      const totalHeight = containerRef.current.offsetHeight
      const targetPos = (index / (projects.length - 1)) * (totalHeight - window.innerHeight)
      window.scrollTo({
