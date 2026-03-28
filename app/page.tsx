@@ -28,7 +28,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="overflow-hidden">
+    <>
       <Navigation scrollProgress={scrollProgress} />
       <LateNightBanner />
 
@@ -53,6 +53,6 @@ export default function Home() {
           style={{ width: `${scrollProgress * 100}%` }}
         />
       </div>
-    </div>
+    </>
   )
 }
